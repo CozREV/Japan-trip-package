@@ -15,4 +15,8 @@ function UpdateView(){
     }
 
     document.getElementById("main").innerHTML = html
+    
+    if (appState.app.currentView === "Packing"){
+        initPackingBtns()
+    }
 }
