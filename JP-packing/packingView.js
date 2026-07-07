@@ -9,19 +9,23 @@ function ViewPacking(){
         `).join("")
 
         return /*html*/ `
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Weight</th>
-                    <th>Packed</th>
-                </tr>
-                ${rows}
-            </table>
+        <section id="wrapper">
+            <div id="table-container">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Weight</th>
+                        <th>Packed</th>
+                    </tr>
+                    ${rows}
+                </table>
+            </div>
             <div id="AddRemoveBtns">
                 <button class="AddRemove-btn" id="AddBtn">Add row</button>
                 <button class="AddRemove-btn" id="RemoveBtn">Remove row</button>
             </div>
+        </section>
             `
 }
 

@@ -1,6 +1,6 @@
 function UpdateView(){
     let html = ""
-
+    
     if(appState.app.currentView === "Menu"){
         html = MenuView()
     }
@@ -13,9 +13,9 @@ function UpdateView(){
     else if (appState.app.currentView === "Budget"){
         html = ViewBudget()
     }
-
-    document.getElementById("main").innerHTML = html
     
+    document.getElementById("main").innerHTML = html
+
     if (appState.app.currentView === "Packing"){
         initPackingBtns()
     }
