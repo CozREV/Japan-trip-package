@@ -1,6 +1,6 @@
 function ViewPacking(){
-    let rows = appState.packing.items.map(item => /*html*/ `
-        <tr>
+    let rows = appState.packing.items.map((item, index) => /*html*/ `
+        <tr data-index="${index}">
             <td contenteditable="true" class="itemList">${item.name}</td>
             <td contenteditable="true" class="itemList">${item.quantity}</td>
             <td contenteditable="true" class="itemList">${item.weight}</td>
@@ -9,7 +9,7 @@ function ViewPacking(){
         `).join("")
 
         return /*html*/ `
-        <section id="wrapper">
+        <section id="wrapper" class="${appState.app.deleteMode ? "deleteMode" : ""}">
             <div id="table-container">
                 <table>
                     <tr>

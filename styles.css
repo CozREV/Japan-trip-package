@@ -175,3 +175,11 @@ table {
     border-radius: 10px;
 }
 
+.deleteMode tr:hover td {
+    background: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+#wrapper.deleteMode {
+    background: rgba(0, 0, 0, 0.513);
+}
