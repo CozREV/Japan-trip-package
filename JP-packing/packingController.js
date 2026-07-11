@@ -19,6 +19,7 @@ function initPackingBtns(){
             name: document.getElementById("popup-name").value,
             quantity: document.getElementById("popup-quantity").value,
             weight: document.getElementById("popup-weight").value,
+            unit: document.getElementById("popup-unit").value,
             hasPacked: document.getElementById("popup-packed").checked
         }
 

@@ -3,7 +3,7 @@ function ViewPacking(){
         <tr data-index="${index}">
             <td contenteditable="true" class="itemList">${item.name}</td>
             <td contenteditable="true" class="itemList">${item.quantity}</td>
-            <td contenteditable="true" class="itemList">${item.weight}</td>
+            <td contenteditable="true" class="itemList">${item.weight} ${item.unit}</td>
             <td contenteditable="true" class="itemList">${item.hasPacked}</td>
         </tr>
         `).join("")
@@ -44,7 +44,12 @@ function ViewPopup(){
                     <tr>
                         <td><input type="text" id="popup-name"></td>
                         <td><input type="number" id="popup-quantity"></td>
-                        <td><input type="number" id="popup-weight"></td>
+                        <td><input type="number" id="popup-weight">
+                            <select id="popup-unit">
+                                <option value="kg">kg</option>
+                                <option value="lbs">lbs</option>
+                            </select>
+                        </td>
                         <td><input type="checkbox" id="popup-packed"></td>
                     </tr>
                 </table>
