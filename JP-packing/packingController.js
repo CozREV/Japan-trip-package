@@ -17,8 +17,8 @@ function initPackingBtns(){
     confirm.addEventListener("click", function(){
         const addList = {
             name: document.getElementById("popup-name").value,
-            quantity: document.getElementById("popup-quantity").value,
-            weight: document.getElementById("popup-weight").value,
+            quantity: Number(document.getElementById("popup-quantity").value),
+            weight: Number(document.getElementById("popup-weight").value),
             unit: document.getElementById("popup-unit").value,
             hasPacked: document.getElementById("popup-packed").checked
         }
@@ -44,4 +44,23 @@ function initPackingBtns(){
 
         UpdateView()
     })
+}
+
+function GetTotalWeight(){
+    let total = 0
+
+    for (let i = 0; i < appState.packing.items.length; i++){
+        total += appState.packing.items[i].weight
+    }
+    return total
+
+}
+
+function GetTotalItems(){
+    let items = 0
+
+    for(let i = 0; i < appState.packing.items.length; i++){
+        items += appState.packing.items[i].quantity
+    }
+    return items
 }

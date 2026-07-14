@@ -10,6 +10,18 @@ function ViewPacking(){
 
         return /*html*/ `
         <section id="wrapper" class="${appState.app.deleteMode ? "deleteMode" : ""}">
+            <div id="EveryTotal">
+                <table>
+                    <tr>
+                        <th>Total Quantity</th>
+                        <th>Total Weight</th>
+                    </tr>
+                    <tr>
+                        <td>${GetTotalItems()}</td>
+                        <td>${GetTotalWeight()}</td>
+                    </tr>
+                </table>
+            </div>
             <div id="table-container">
                 <table>
                     <tr>
