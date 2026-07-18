@@ -7,16 +7,17 @@ function ViewConvert() {
     <section id="wrap-convert">
         <div id="converter">
             <div id="conversion-row">
-                <div id="left-con" class="con-bubble">
+                <div id="left-con" class="pop-bubble con-bubble">
                     <select id="from-currency">${currency}</select>
                     <input type="number" id="from-amount">
                 </div>
-                <div id="right-con" class="con-bubble">
+                <button id="swap-btn"><i class="fa-solid fa-right-left"></i></button>
+                <div id="right-con" class="pop-bubble con-bubble">
                     <span id="jpy-label">JPY</span>
                     <input type="number" id="to-amount">
                 </div>
+                <div id="result"></div>
             </div>
-            <div id="result"></div>
         </div>
     </section>
     `
