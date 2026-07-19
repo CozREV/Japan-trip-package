@@ -6,5 +6,9 @@ const appState = {
         },
     packing: { items: [] },
     budget: { expenses: [ ] },
-    currency: { convert: [] }
+    currency: { convert: [],
+                selected: "USD",
+                rate: 0,
+                swapped: false
+            }
 }

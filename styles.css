@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: "M PLUS Rounded 1c", sans-serif;
+    overflow-x: hidden;
 }
 
 #main {
@@ -116,7 +117,12 @@ body {
     grid-column: 3;
     justify-self: end;
     border: none;
-    scale: 2;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
     padding: 6px 9px;
     box-shadow: 1px 1px 2px black;
     border-radius: 5px;
@@ -126,7 +132,7 @@ body {
 }
 
 #home-btn:hover {
-    scale: 2.32;
+    scale: 1.15;
     cursor: pointer;
 }
 
@@ -214,7 +220,8 @@ td {
     background: linear-gradient(-90deg, #33A6B8, #FDEEF4);
     padding: 50px 40px;
     max-height: 85dvh;
-    min-width: 70dvh;
+    width: fit-content;
+    min-width: 320px;
     box-sizing: border-box;
 }
 
@@ -227,7 +234,7 @@ td {
     padding: 20px 10px;
     background-color: white;
     border: 3px solid black;
-    min-width: 50dvh;
+    min-width: 280px;
 }
 
 #table-container tr:hover td {
@@ -250,7 +257,7 @@ td {
     margin: 0 auto 15px auto;
     padding: 10px;
     border: 3px solid black;
-    max-width: 50dvh;
+    max-width: 400px;
 }
 
 /* ===== POPUP ===== */
@@ -323,17 +330,19 @@ td, #popup-sheet input[type="text"],
 }
 
 #converter {
+    scale: 1.05;
     width: 100%;
     box-sizing: border-box;
-    max-width: 90dvh;
-    min-width: 75dvh;
+    max-width: min(750px, 88vw);
+    min-width: 250px;
     padding: 20px;
     background: linear-gradient(-45deg, #FFFFFB, #e4d9c0);
 }
 
 #wrap-convert {
-    min-width: 85dvh;
-    max-width: 100dvh;
+    width: min(750px, 92vw);
+    min-width: 320px;
+    max-width: min(750px, 92vw);
     padding: 70px 40px;
 }
 

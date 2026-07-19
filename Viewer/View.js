@@ -23,4 +23,8 @@ function UpdateView(){
     if (appState.app.currentView === "Menu"){
         initMenuBtns()
     }
+
+    if (appState.app.currentView === "Converter"){
+        initConvertBtns()
+    }
 }
