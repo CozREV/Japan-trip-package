@@ -44,7 +44,7 @@ function initPackingBtns(){
 
     tableCon.addEventListener("click", function(e){
         let row = e.target.closest("tr")
-        console.log("clicked row:", row, "index:", row ? row.dataset.index : "no row")
+        
         if (!row) return
         if (row.dataset.index === undefined) return
 

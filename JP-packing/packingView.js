@@ -1,5 +1,7 @@
 function ViewPacking(){
-    let rows = appState.packing.items.map((item, index) => /*html*/ `
+    let rows =  appState.packing.items.length === 0
+        ? `<tr><td colspan="4">No items here. Add items below.</td></tr>` 
+        : appState.packing.items.map((item, index) => /*html*/ `
         <tr data-index="${index}">
             <td class="itemList">${item.name}</td>
             <td class="itemList">${item.quantity}</td>
@@ -67,10 +69,10 @@ function ViewPopup(){
                                 <option value="lbs" ${editItem && editItem.unit === "lbs" ? "selected" : ""}>lbs</option>
                             </select>
                         </td>
-                        <td class="pop-bubble"><input type="checkbox" id="popup-packed" value="${editItem && editItem.hasPacked ? "checked" : ""}"></td>
+                        <td class="pop-bubble"><input type="checkbox" id="popup-packed" ${editItem && editItem.hasPacked ? "checked" : ""}></td>
                     </tr>
                 </table>
-                <button class="popup-btn" id="confirm">Add</button>
+                <button class="popup-btn" id="confirm">${appState.app.editIndex === null ? "Add" : "Save"}</button>
                 <button class="popup-btn" id="cancel">Cancel</button>
             </div>
         </div>
