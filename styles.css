@@ -306,13 +306,16 @@ td, #popup-sheet input[type="text"],
 
 /* Chrome, Safari, Edge */
 #popup-sheet input[type="number"]::-webkit-inner-spin-button,
-#popup-sheet input[type="number"]::-webkit-outer-spin-button {
+#popup-sheet input[type="number"]::-webkit-outer-spin-button,
+.input-bubble::-webkit-outer-spin-button,
+.input-bubble::-webkit-inner-spin-button
+{
     -webkit-appearance: none;
     margin: 0;
 }
 
 /* Firefox */
-#popup-sheet input[type="number"] {
+#popup-sheet input[type="number"], .input-bubble {
     -moz-appearance: textfield;
 }
 
@@ -335,7 +338,7 @@ td, #popup-sheet input[type="text"],
     box-sizing: border-box;
     max-width: min(750px, 88vw);
     min-width: 250px;
-    padding: 20px;
+    padding: 30px 20px;
     background: linear-gradient(-45deg, #FFFFFB, #e4d9c0);
 }
 
@@ -352,7 +355,7 @@ td, #popup-sheet input[type="text"],
     align-items: center;
     gap: 8px;
     flex: 1;
-    padding: 15px;
+    padding: 30px 15px;
     border: 2px solid black;
     border-radius: 10px;
     min-width: 0;
@@ -378,4 +381,22 @@ td, #popup-sheet input[type="text"],
 .con-bubble > input {
     width: 100%;
     box-sizing: border-box;
+}
+
+.input-bubble{
+    text-align: center;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#from-currency {
+    text-align: center;
+    background: white;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }

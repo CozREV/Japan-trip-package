@@ -18,22 +18,36 @@ function initConvertBtns() {
         await getRate(selected)
 
         let amount = Number(currencyAmount.value)
+        appState.currency.currencyValue = amount
         let converted = amount * appState.currency.rate
-        yenAmount.value = converted
+        let display = Number.isInteger(converted) ? converted : converted.toFixed(2)
+        
+        yenAmount.value = display
+        appState.currency.yenValue = display
     })
 
     currencyAmount.addEventListener("input", function(){
         let amount = Number(currencyAmount.value)
+        appState.currency.currencyValue = amount
         let converted = amount * appState.currency.rate
+        let display = Number.isInteger(converted) ? converted : converted.toFixed(2)
 
-        yenAmount.value = converted
+
+        yenAmount.value = display
+        appState.currency.yenValue = display
     })
 
     yenAmount.addEventListener("input", function(){
-        let amount = Number(yenAmount.value)
-        let converted = amount / appState.currency.rate
+        if (appState.currency.rate === 0) return
 
-        currencyAmount.value = converted
+        let amount = Number(yenAmount.value)
+        appState.currency.yenValue = amount
+        let converted = amount / appState.currency.rate
+        let display = Number.isInteger(converted) ? converted : converted.toFixed(2)
+
+
+        currencyAmount.value = display
+        appState.currency.currencyValue = display
     })
 }
 

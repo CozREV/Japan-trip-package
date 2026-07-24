@@ -26,6 +26,8 @@ function initPackingBtns(){
             hasPacked: document.getElementById("popup-packed").checked
         }
 
+        if (document.getElementById("popup-weight").value === "" || document.getElementById("popup-quantity").value === "") return
+
         if (appState.app.editIndex === null){
             appState.packing.items.push(addList)
         } else {

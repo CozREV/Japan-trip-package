@@ -9,6 +9,8 @@ const appState = {
     currency: { convert: [],
                 selected: "USD",
                 rate: 0,
-                swapped: false
+                swapped: false,
+                currencyValue: 0,
+                yenValue: 0
             }
 }
